@@ -28,7 +28,7 @@ const nextConfig = {
     return [
       {
         source: '/dashboard/workers/edit-worker/:workerId',
-        destination: '/edit-worker',
+        destination: '/[workerId]',
       },
       {
         source: '/dashboard',
