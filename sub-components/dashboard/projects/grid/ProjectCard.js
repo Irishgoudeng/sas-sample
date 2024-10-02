@@ -34,27 +34,10 @@ const ProjectCard = ({ item }) => {
 				<Dropdown.Menu align="end">
 					<Dropdown.Header>Settings</Dropdown.Header>
 					<Dropdown.Item eventKey="1">
+						<i className="fe fe-eye dropdown-item-icon"></i>View Details
+					</Dropdown.Item>
+					<Dropdown.Item eventKey="1">
 						<i className="fe fe-edit dropdown-item-icon"></i>Edit Details
-					</Dropdown.Item>
-					<Dropdown.Item eventKey="2">
-						<i className="fe fe-link dropdown-item-icon"></i>Copy project link
-					</Dropdown.Item>
-					<Dropdown.Item eventKey="3">
-						<i className="fe fe-save dropdown-item-icon"></i>Save as Default
-					</Dropdown.Item>
-					<Dropdown.Item eventKey="3">
-						<i className="fe fe-copy dropdown-item-icon"></i>Duplicate
-					</Dropdown.Item>
-					<Dropdown.Divider />
-					<Dropdown.Item eventKey="3">
-						<i className="fe fe-upload dropdown-item-icon"></i>Import
-					</Dropdown.Item>
-					<Dropdown.Item eventKey="3">
-						<i className="fe fe-printer dropdown-item-icon"></i>Export / Print
-					</Dropdown.Item>
-					<Dropdown.Item eventKey="3">
-						<i className="fe fe-users dropdown-item-icon"></i>Move to another
-						team
 					</Dropdown.Item>
 					<Dropdown.Divider />
 					<Dropdown.Item eventKey="3">

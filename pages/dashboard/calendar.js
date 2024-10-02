@@ -78,17 +78,51 @@ const Calendar = () => {
     }
   };
 
+  // const calendarOptions = {
+  //   ref: calendarRef,
+  //   events: events, // Use the events state
+  //   plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin],
+  //   initialView: 'dayGridMonth',
+  //   headerToolbar: {
+  //     left: 'prev,next',
+  //     center: 'title',
+  //     right: 'dayGridMonth'
+  //   },
+  //   displayEventTime: false,
+  //   editable: true,
+  //   eventResizableFromStart: true,
+  //   dayMaxEvents: 2,
+  //   navLinks: true,
+  //   eventClick({ event: clickedEvent }) {
+  //     setIsEditEvent(true);
+  //     setShowEventOffcanvas(true);
+  //     setSelectedEvent(clickedEvent);
+  //   },
+  //   dateClick(info) {
+  //     const ev = blankEvent;
+  //     const date = new Date(info.date);
+  //     date.setDate(date.getDate() + 1);
+  //     ev.start = info.date;
+  //     ev.end = date;
+  //     setSelectedEvent(ev);
+  //     setIsEditEvent(false);
+  //   },
+  //   eventClassNames({ event: calendarEvent }) {
+  //     return [`text-white bg-${calendarEvent.extendedProps.priority}`];
+  //   },
+  // };
+
   const calendarOptions = {
     ref: calendarRef,
     events: events, // Use the events state
     plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin],
-    initialView: 'dayGridMonth',
+    initialView: 'dayGridMonth', // You can set this to 'timeGridWeek' if you want the weekly view to be default
     headerToolbar: {
-      left: 'prev,next',
+      left: 'prev,next today',
       center: 'title',
-      right: 'dayGridMonth'
+      right: 'dayGridMonth,timeGridWeek' // Added timeGridWeek for weekly view
     },
-    displayEventTime: false,
+    displayEventTime: true, // Show event times in the week view
     editable: true,
     eventResizableFromStart: true,
     dayMaxEvents: 2,
@@ -111,7 +145,7 @@ const Calendar = () => {
       return [`text-white bg-${calendarEvent.extendedProps.priority}`];
     },
   };
-
+  
   return (
     <Fragment>
       <Row>

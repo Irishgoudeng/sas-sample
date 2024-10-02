@@ -13,7 +13,7 @@ const Error404 = () => {
 	return (
 		<Fragment>
 			{/* Geeks SEO settings  */}
-			<GeeksSEO title="404 Error | Geeks Nextjs Template" />
+			<GeeksSEO title="404 Error | SAS - SAP B1 Portal" />
 
 			<Row>
 				<Col lg={12} md={12} sm={12}>

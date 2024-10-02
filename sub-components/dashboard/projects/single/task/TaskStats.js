@@ -10,10 +10,10 @@ const TaskStats = () => {
 			<Col md={6} xl={3} xs={12}>
 				{/* task summary stat card  */}
 				<StatCenterInfo
-					title="Task Summary"
+					title="Jobs Summary"
 					value={50}
 					valueColorVariant="primary"
-					contentHTML="Total Task Count"
+					contentHTML="Total Jobs Count"
 				/>
 			</Col>
 			<Col md={6} xl={3} xs={12}>

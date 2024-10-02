@@ -57,14 +57,14 @@ export const DashboardMenu = [
   },
   {
     id: uuid(),
-    title: 'Customers',
+    title: 'Customers (On Going)',
     icon: <Icon path={mdiAccountBox} className="nav-icon me-2" size={0.8} />,
     link: '/dashboard/clients/list-clients',
     isAuthenticated: true,
   },
   {
     id: uuid(),
-    title: 'Locations',
+    title: 'Locations (On Going)',
     icon: <Icon path={mdiMap} className="nav-icon me-2" size={0.8} />,
     link: '/dashboard/clients/list-clients',
     isAuthenticated: true,
@@ -101,7 +101,7 @@ export const DashboardMenu = [
       id: uuid(),
       title: 'Task Lists',
       icon: <Icon path={mdiClipboardList} className="nav-icon me-2" size={0.8} />, // Task List icon
-      link: '/dashboard/tasks',
+      link: '/dashboard/tasks/list',
       isAuthenticated: true,
     },
   // Schedule Management

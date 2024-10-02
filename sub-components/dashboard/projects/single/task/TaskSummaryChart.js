@@ -48,7 +48,7 @@ const TaskSummaryChart = () => {
 			<Card.Body>
 				<div className="d-flex justify-content-between">
 					<div>
-						<h4 className="mb-0">Task Summary</h4>
+						<h4 className="mb-0">Jobs Summary</h4>
 					</div>
 					<div>
 						<ActionMenu />

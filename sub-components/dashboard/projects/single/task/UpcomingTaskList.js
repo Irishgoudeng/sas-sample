@@ -44,17 +44,17 @@ const UpcomingTaskList = () => {
 	return (
 		<Card className="h-100">
 			<Card.Header className="card-header ">
-				<h4 className="mb-0">Upcoming task by Assignee</h4>
+				<h4 className="mb-0">Upcoming Jobs</h4>
 			</Card.Header>
 			<Table hover responsive className="text-nowrap mb-0 table-centered">
 				<thead className="table-light">
 					<tr>
-						<th>Tasks</th>
+						<th>Jobs</th>
 						<th>End Date</th>
 						<th>Status</th>
 						<th>Progress</th>
 						<th>Assignee</th>
-						<th></th>
+						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>

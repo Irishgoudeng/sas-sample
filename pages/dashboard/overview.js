@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Row, Dropdown, Card, CardBody } from 'react-bootstrap';
 import Link from 'next/link';
 import useAuth from '../../utils/useAuth';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
@@ -12,6 +11,14 @@ import { StatRightIcon } from 'widgets';
 
 // Import sub components
 import { PopularInstructor, Activity } from 'sub-components';
+
+// import node module libraries
+import { Fragment } from 'react';
+import { Row, Col } from 'react-bootstrap';
+
+// import sub components
+import { CommonHeaderTabs, TaskStats, TaskSummaryChart, TaskCompletionStatusChart, TaskbySectionsChart, UpcomingTaskList }  from 'sub-components';
+
 
 // Import ApexCharts dynamically (Next.js specific)
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
@@ -324,98 +331,35 @@ const Overview = () => {
   
 
   return (
-    <div>
-      <Row>
-        <Col lg={12} md={12} sm={12}>
-          <div className="border-bottom pb-4 mb-4 d-lg-flex justify-content-between align-items-center">
-            <div className="mb-3 mb-lg-0">
-              <h1 className="mb-0 h2 fw-bold">Dashboard</h1>
-            </div>
-          </div>
-        </Col>
-      </Row>
-      <Row>
-      <Col xl={4} lg={6} md={12} sm={12}>
-  <StatRightIcon
-    title="JOBS"
-    value={totalJobCount} // Use the new state for total jobs count
-    summary="Total Jobs"
-    summaryValue=""
-    summaryIcon=""
-    //showSummaryIcon
-    iconName="shopping-bag"
-    iconColorVariant="primary"
-    classValue="mb-4"
-  />
-</Col>
+    <Fragment>
+    {/* page header tabs */}
+    <CommonHeaderTabs />
 
+    {/* various stats of task */}
+    <TaskStats />
 
+    <Row>
+      <Col xl={8} md={12} xs={12} className="mb-4">
+        {/* task summary chart  */}
+        <TaskSummaryChart />
+      </Col>
+      <Col xl={4} md={12} xs={12} className="mb-4">
+        {/* task completion status chart  */}
+        <TaskCompletionStatusChart />
+      </Col>
+    </Row>
+    <Row>
+      <Col xl={4} xs={12} className="mb-4 mb-xl-0">
+        {/* task by sections chart  */}
+        <TaskbySectionsChart />
+      </Col>
+      <Col xl={8} xs={12} className="mb-4 mb-xl-0">
+        {/* upcoming task list by assignee  */}
+        <UpcomingTaskList />
+      </Col>
+    </Row>
+  </Fragment>
 
-        <Col xl={4} lg={6} md={12} sm={12}>
-          <StatRightIcon
-            title="SCHEDULES"
-            value={scheduleCount}
-            summary="Total Schedules"
-            summaryValue=""
-            summaryIcon=""
-            //showSummaryIcon
-            iconName="calendar"
-            iconColorVariant="primary"
-            classValue="mb-4"
-          />
-        </Col>
-
-        <Col xl={4} lg={6} md={12} sm={12}>
-          <StatRightIcon
-            title="WORKERS"
-            value={userCount} // update the value prop with the user count
-            summary="Total Worker"
-            summaryValue=""
-            summaryIcon=""
-            //showSummaryIcon
-            iconName="users"
-            iconColorVariant="primary"
-            classValue="mb-4"
-          />
-        </Col>
-      </Row>
-
-      <Row className="mb-4">
-        <Col xl={6} lg={6} md={12} sm={12}>
-          <Card className="mb-4">
-            <CardBody>
-              <div className="mb-4">
-                <h3>Open Jobs vs Closed Jobs by Week</h3>
-                <Chart options={stackedChartOptions} series={openClosedSeries} type="bar" />
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xl={6} lg={6} md={12} sm={12}>
-          <Card className="mb-4">
-            <CardBody>
-              <div className="mb-4">
-                <h3>Scheduled Jobs vs Cancelled Jobs by Week</h3>
-                <Chart options={stackedChartOptions} series={scheduledCancelledSeries} type="bar" />
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-      <Row className="mb-4">
-        <Col xl={6} lg={6} md={12} sm={12}>
-          <Card>
-            <CardBody>
-              <div className="mb-2">
-                <h3>Worker Status Distribution</h3>
-                <Chart options={pieChartOptions} series={pieChartSeries} type="pie" />
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-      {/* Other chart components can go here */}
-    </div>
   );
 };
 

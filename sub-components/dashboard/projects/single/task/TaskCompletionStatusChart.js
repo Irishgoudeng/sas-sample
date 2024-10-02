@@ -48,7 +48,7 @@ const TaskCompletionStatusChart = () => {
 			<Card.Body>
 				<div className="d-flex justify-content-between">
 					<div className="mb-4">
-						<h4 className="mb-0 ">Task Completion Status</h4>
+						<h4 className="mb-0 ">Jobs Completion Status</h4>
 					</div>
 					<div>
 						<ActionMenu />

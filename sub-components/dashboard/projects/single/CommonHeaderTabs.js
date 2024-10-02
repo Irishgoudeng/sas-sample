@@ -25,60 +25,10 @@ const CommonHeaderTabs = () => {
 					>
 						<div className="mb-2 mb-lg-0">
 							<h1 className="mb-0 h2 fw-bold">
-								Geeks UI - Design &amp; Development{' '}
+								SAS - Dashboard 
 							</h1>
 						</div>
-						<div className="d-flex align-items-center">
-							{/*  avatar group */}
-							<AvatarGroup className="me-0">
-								<Avatar
-									size="md"
-									src={'/images/avatar/avatar-1.jpg'}
-									type="image"
-									name="Paul Haney"
-									className="rounded-circle"
-									imgtooltip
-								/>
-								<Avatar
-									size="md"
-									src={'/images/avatar/avatar-2.jpg'}
-									type="image"
-									name="Gali Linear"
-									className="rounded-circle"
-									imgtooltip
-								/>
-								<Avatar
-									size="md"
-									src={'/images/avatar/avatar-3.jpg'}
-									type="image"
-									name="Mary Holler"
-									className="rounded-circle"
-									imgtooltip
-								/>
-								<Avatar
-									size="md"
-									src={'/images/avatar/avatar-4.jpg'}
-									type="image"
-									name="Lio Nordal"
-									className="rounded-circle"
-									imgtooltip
-								/>
-								<Avatar
-									size="md"
-									type="initial"
-									name="5+"
-									variant="light"
-									className="rounded-circle text-dark"
-									showExact
-								/>
-							</AvatarGroup>
-							{/*  icon  */}
-							<Link
-								href="#"
-								className="btn btn-icon btn-white border border-2 rounded-circle btn-dashed ms-2">
-								+
-							</Link>
-						</div>
+					
 					</div>
 				</Col>
 			</Row>

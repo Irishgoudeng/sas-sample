@@ -118,8 +118,7 @@ export const getStaticProps = async ({ params }) => {
 
 // getStaticPaths to pre-generate pages based on worker data
 export const getStaticPaths = async () => {
-
-  const paths = []; // You would need to query Firestore to generate worker IDs dynamically
+  const paths = []; 
 
   return {
     paths,

@@ -45,7 +45,7 @@ const OffcanvasCreateProjectForm = ({ onClick }) => {
 						</Form.Label>
 						<Form.Control
 							type="text"
-							placeholder="Enter project title"
+							placeholder="Enter Task title"
 							required
 						/>
 					</Form.Group>
@@ -58,7 +58,7 @@ const OffcanvasCreateProjectForm = ({ onClick }) => {
 						<Form.Control
 							as="textarea"
 							rows={3}
-							placeholder="Enter brief about project..."
+							placeholder="Enter brief about tasks..."
 						/>
 					</Form.Group>
 				</Col>

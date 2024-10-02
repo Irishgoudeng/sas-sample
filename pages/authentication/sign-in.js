@@ -171,7 +171,7 @@ const SignIn = () => {
   
   return (
     <Fragment>
-      <GeeksSEO title="Sign In | Potensi - SAP B1 Portal" />
+      <GeeksSEO title="Sign In | SAS - SAP B1 Portal" />
 
       <Row className="align-items-center justify-content-center g-0 min-vh-100">
         <Col lg={5} md={5} className="py-8 py-xl-0">
@@ -181,7 +181,7 @@ const SignIn = () => {
                 {/* <Link href="/">
                
                 </Link> */}
-                   <Image src="/images/SAS-LOGO.png" alt="Potensi Logo" height={150} width={250} />
+                   <Image src="/images/SAS-LOGO.png" alt="SAS Logo" height={150} width={250} />
                
               
               </div>

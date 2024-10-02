@@ -18,8 +18,8 @@ import { Fragment } from 'react';
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const pageURL = process.env.baseURL + router.pathname;
-  const title = "Potensi - SAP B1 Portal";
-  const description = "Discover Potensi, your ultimate SAP B1 portal. Utilize the portal with ease!"
+  const title = "SAS - SAP B1 Portal";
+  const description = "Discover SAS, your ultimate SAP B1 portal. Utilize the portal with ease!"
   const keywords = "SAP B1, Service Layer, Admin dashboard, Portal, web apps, bootstrap 5, Pixelcare Consulting"
 
   const Layout = Component.Layout || (router.pathname.includes('dashboard') ? (router.pathname.includes('instructor') || router.pathname.includes('student') ? DefaultMarketingLayout : DefaultDashboardLayout) : DefaultMarketingLayout)
