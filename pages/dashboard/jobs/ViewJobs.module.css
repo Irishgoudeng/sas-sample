@@ -1,0 +1,5 @@
+/* ViewJobs.module.css */
+.dataTableRow:hover {
+    background-color: gray; 
+    cursor: pointer; /* Change cursor to pointer */
+  }

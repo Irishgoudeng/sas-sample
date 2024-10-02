@@ -1,0 +1,19 @@
+/* Ensures the event text in list view is always black */
+.fc-list-event-title, .fc-list-event-time, .fc-list-item-marker {
+    color: #000 !important; /* Ensures the event text in list view is always black */
+  }
+  
+  /* Ensures the event text color remains consistent when highlighted */
+  .fc-list-event:hover .fc-list-event-title, 
+  .fc-list-event:hover .fc-list-event-time, 
+  .fc-list-event:hover .fc-list-item-marker {
+    color: #000 !important; /* Ensures the event text color remains consistent when highlighted */
+  }
+  
+  /* Ensures the event text color remains black when the list item is active (highlighted) */
+  .fc-list-event.fc-event.active .fc-list-event-title,
+  .fc-list-event.fc-event.active .fc-list-event-time,
+  .fc-list-event.fc-event.active .fc-list-item-marker {
+    color: #000 !important;
+  }
+  

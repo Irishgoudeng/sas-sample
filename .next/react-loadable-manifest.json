@@ -1,0 +1,20 @@
+{
+  "pages\\dashboard\\overview.js -> react-apexcharts": {
+    "id": "pages\\dashboard\\overview.js -> react-apexcharts",
+    "files": [
+      "static/chunks/node_modules_react-apexcharts_dist_react-apexcharts_min_js.js"
+    ]
+  },
+  "widgets\\charts\\ApexCharts.js -> react-apexcharts": {
+    "id": "widgets\\charts\\ApexCharts.js -> react-apexcharts",
+    "files": [
+      "static/chunks/node_modules_react-apexcharts_dist_react-apexcharts_min_js.js"
+    ]
+  },
+  "widgets\\odometer\\GKOdometer.js -> react-odometerjs": {
+    "id": "widgets\\odometer\\GKOdometer.js -> react-odometerjs",
+    "files": [
+      "static/chunks/node_modules_react-odometerjs_dist_index_js.js"
+    ]
+  }
+}
