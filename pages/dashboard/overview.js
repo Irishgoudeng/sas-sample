@@ -3,6 +3,7 @@ import Link from 'next/link';
 import useAuth from '../../utils/useAuth';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import dynamic from 'next/dynamic';
+import { Dropdown } from 'react-bootstrap';
 
 const db = getFirestore();
 
