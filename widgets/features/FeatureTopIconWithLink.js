@@ -3,7 +3,7 @@
  * Style : Features with top icon and link to redirect
  * Added in	: v1.3.0
  *
- * Availalble Parameters
+ * Available Parameters
  *
  * item.icon		: 	Feather icon name
  * item.title		: 	Title of feature
@@ -28,10 +28,10 @@ import { mdiArrowRight } from '@mdi/js';
 
 const FeatureTopIconWithLink = ({
 	item,
-	isCard,
-	isButton,
-	buttonVariant,
-	className
+	isCard = false,
+	isButton = false,
+	buttonVariant = 'primary',
+	className = ''
 }) => {
 	return (
 		<Fragment>
@@ -127,13 +127,6 @@ FeatureTopIconWithLink.propTypes = {
 		'outline-light',
 		'outline-dark'
 	])
-};
-
-FeatureTopIconWithLink.defaultProps = {
-	isCard: false,
-	isButton: false,
-	buttonVariant: 'primary',
-	className: ''
 };
 
 export default FeatureTopIconWithLink;

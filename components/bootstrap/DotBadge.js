@@ -2,7 +2,7 @@
 Component : DotBadge
 ****************************
 
-Availalble Parameters
+Available Parameters
 
 bg        : Optional ( default = primary ), possible bg options are, primary, light-primary, secondary,  light-secondary etc...
 
@@ -13,11 +13,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Badge } from 'react-bootstrap';
 
-const DotBadge = ({...props }) => {
+const DotBadge = ({ ...props }) => {
 	return (
 		<span className={props.className}>
-		<Badge bg={props.bg} className="badge-dot"></Badge> {props.children}
-	</span>
+			<Badge bg={props.bg} className="badge-dot"></Badge> {props.children}
+		</span>
 	);
 };
 
@@ -28,7 +28,7 @@ DotBadge.propTypes = {
 
 DotBadge.defaultProps = {
 	bg: 'light-primary',
-	className:'me-2'
+	className: 'me-2'
 };
 
 export default DotBadge;

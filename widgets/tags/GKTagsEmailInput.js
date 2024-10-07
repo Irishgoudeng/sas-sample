@@ -2,7 +2,7 @@
 Component : Tag Input Control
 *********************************
 
-Availalble Parameters
+Available Parameters
 
 defaulttags  : Optional, here you can pass default tag list like this  defaulttags={["example1@domain.com", "example2@domain.com"]}
 
@@ -14,11 +14,11 @@ import PropTypes from 'prop-types';
 import ReactTagInput from '@pathofdev/react-tag-input';
 import { ToastContainer, toast } from 'react-toastify';
 
-const GKTagsEmailInput = ({ placeholder }) => {
-	const [tags, setTags] = React.useState([]);
+const GKTagsEmailInput = ({ placeholder = 'Type and press enter', defaulttags = [] }) => {
+	const [tags, setTags] = React.useState(defaulttags);
 
 	return (
-        <Fragment>
+		<Fragment>
 			<ReactTagInput
 				tags={tags}
 				placeholder={placeholder}
@@ -41,17 +41,12 @@ const GKTagsEmailInput = ({ placeholder }) => {
 			/>
 			<ToastContainer />
 		</Fragment>
-    );
+	);
 };
 
 GKTagsEmailInput.propTypes = {
 	defaulttags: PropTypes.array,
 	placeholder: PropTypes.string
-};
-
-GKTagsEmailInput.defaultProps = {
-	defaulttags: [],
-	placeholder: 'Type and press enter'
 };
 
 export default GKTagsEmailInput;

@@ -8,8 +8,8 @@ const SectionHeadingDarkCenter = ({
 	title,
 	subtitle,
 	description,
-	className,
-	dark
+	className = 'display-3',
+	dark = true
 }) => {
 	return (
 		<div className="text-center mb-8">
@@ -30,13 +30,7 @@ SectionHeadingDarkCenter.propTypes = {
 	subtitle: PropTypes.string,
 	description: PropTypes.string.isRequired,
 	className: PropTypes.string,
-	dark : PropTypes.bool
-};
-
-// Specifies the default values for props
-SectionHeadingDarkCenter.defaultProps = {
-	className: 'display-3',
-	dark : true
+	dark: PropTypes.bool
 };
 
 export default SectionHeadingDarkCenter;

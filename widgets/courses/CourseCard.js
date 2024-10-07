@@ -22,7 +22,13 @@ import LevelIcon from 'widgets/miscellaneous/LevelIcon';
 // import utility file
 import { numberWithCommas } from 'helper/utils';
 
-const CourseCard = ({ item, free, viewby, showprogressbar, extraclass }) => {
+const CourseCard = ({
+	item,
+	free = false,
+	viewby = 'grid',
+	showprogressbar = false,
+	extraclass = '',
+}) => {
 	/** Used in Course Index, Course Category, Course Filter Page, Student Dashboard etc...  */
 	const GridView = () => {
 		return (
@@ -244,14 +250,6 @@ const CourseCard = ({ item, free, viewby, showprogressbar, extraclass }) => {
 			)}
 		</Fragment>
 	);
-};
-
-// Specifies the default values for props
-CourseCard.defaultProps = {
-	free: false,
-	viewby: 'grid',
-	showprogressbar: false,
-	extraclass: ''
 };
 
 // Typechecking With PropTypes

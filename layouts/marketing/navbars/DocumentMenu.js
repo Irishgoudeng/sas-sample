@@ -2,13 +2,15 @@
 import { Fragment } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { NavDropdown } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 
-// import hooks
+// import custom hooks
 import useMounted from 'hooks/useMounted';
 
 const DocumentMenu = (props) => {
     const { className } = props;
     const hasMounted = useMounted();
+    const version = useSelector((state) => state.app.version)
 
     const isDesktop = useMediaQuery({
         query: '(min-width: 1224px)'
@@ -25,7 +27,7 @@ const DocumentMenu = (props) => {
         return (
             <div className="ms-3 lh-3">
                 <h5 className="mb-0">
-                    Changelog <span className="text-primary ms-1">v2.2.1</span>
+                    Changelog <span className="text-primary ms-1">v{version}</span>
                 </h5>
                 <p className="mb-0 fs-6">See what&apos;s new</p>
             </div>

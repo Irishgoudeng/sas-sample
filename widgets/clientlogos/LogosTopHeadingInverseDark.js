@@ -2,7 +2,7 @@
 Component : Logo with Top Heading and Inverse Dark Logo
 *******************************************************
 
-Availalble Parameters
+Available Parameters
 
 logos        : Required, list of the logos in JSON format
 title        : Optional, title to show logo section title
@@ -15,7 +15,7 @@ inverse		 : Optional, default true i.e. show all logos in inverse format, set fa
 import PropTypes from 'prop-types';
 import { Row, Col, Image } from 'react-bootstrap';
 
-const LogosTopHeadingInverseDark = ({ logos, title, limit, inverse }) => {
+const LogosTopHeadingInverseDark = ({ logos, title, limit = -1, inverse = true }) => {
 	const LogoImage = ({ logo }) => {
 		return (
 			<Col>
@@ -56,12 +56,7 @@ LogosTopHeadingInverseDark.propTypes = {
 	logos: PropTypes.array,
 	title: PropTypes.string,
 	limit: PropTypes.number,
-	inverse : PropTypes.bool
-};
-
-LogosTopHeadingInverseDark.defaultProps = {
-	limit: -1,
-	inverse : true
+	inverse: PropTypes.bool
 };
 
 export default LogosTopHeadingInverseDark;

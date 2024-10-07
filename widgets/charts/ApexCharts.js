@@ -5,14 +5,12 @@ import dynamic from 'next/dynamic'
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const ApexCharts = (props) => {
-	// ** Props
-	const { options, series, width, type, height } = props;
+const ApexCharts = ({ options, series, width, type = 'line', height }) => {
 	const [windowDefined, setWindowDefined] = useState('blue')
 	useEffect(() => setWindowDefined(true), [])
 	return (
 		<Fragment>
-			{windowDefined && <Chart options={options} series={series} type={type} width={width} height={height} />}		
+			{windowDefined && <Chart options={options} series={series} type={type} width={width} height={height} />}
 		</Fragment>
 	);
 };
@@ -21,14 +19,9 @@ const ApexCharts = (props) => {
 ApexCharts.propTypes = {
 	options: PropTypes.object.isRequired,
 	series: PropTypes.array.isRequired,
-	type: PropTypes.string.isRequired,
+	type: PropTypes.string,
 	width: PropTypes.number,
 	height: PropTypes.number
-};
-
-// ** Default Props
-ApexCharts.defaultProps = {
-	type: 'line'
 };
 
 export default ApexCharts;

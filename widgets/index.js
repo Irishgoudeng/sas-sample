@@ -66,7 +66,8 @@ import JobListingGridviewCard from 'widgets/cards/JobListingGridviewCard';
 import JobListingListviewCard from 'widgets/cards/JobListingListviewCard';
 import SkillCourseCard from 'widgets/cards/SkillCourseCard'; // added in (v2.2.0)
 import WebinarCard from 'widgets/cards/WebinarCard'; // added in (v2.2.0)
-
+import MentorCard from 'widgets/cards/MentorCard'; // added in (v2.3.0)
+import MentorSummaryCard from 'widgets/cards/MentorSummaryCard'; // added in (v2.3.0)
 
 // import widget/custom components from clientlogos folder 
 import LogosTopHeading from 'widgets/clientlogos/LogosTopHeading';
@@ -75,6 +76,7 @@ import LogosTopHeading3 from 'widgets/clientlogos/LogosTopHeading3'; // added in
 import LogosTopHeadingOffset from 'widgets/clientlogos/LogosTopHeadingOffset';
 import LogosTopHeadingInverseDark from 'widgets/clientlogos/LogosTopHeadingInverseDark';
 import LogosTopHeadingOffset2 from 'widgets/clientlogos/LogosTopHeadingOffset2';  // added in v2.0.0
+import LogosTopBrands from 'widgets/clientlogos/LogosTopBrands' // added in v2.3.0
 
 // import widget/custom components from call-to-action folder 
 import CTAButton from 'widgets/call-to-action/CTAButton';
@@ -162,6 +164,9 @@ import TableNesting from 'widgets/tables/TableNesting';
 import TableActive from 'widgets/tables/TableActive';
 import TableSmall from 'widgets/tables/TableSmall';
 
+// import modal popups ( add in v2.3.0)
+import SignUpModalPopup from 'widgets/modal-popup/SignUpModalPopup';
+
 export {
    ACDeleteProfilePage,
    ACEditProfilePage,
@@ -205,6 +210,7 @@ export {
    InstructorReviewCard,
    LevelIcon,
    LevelIconWithTooltip,
+   LogosTopBrands,
    LogosTopHeading,
    LogosTopHeading2,
    LogosTopHeading3,
@@ -246,7 +252,7 @@ export {
 
    CompanyListingCard, FeaturedCompaniesCard, GetEnrolledCourseCard,
    JobListingGridviewCard, JobListingListviewCard,
-   SkillCourseCard, WebinarCard,
+   SkillCourseCard, WebinarCard, MentorCard, MentorSummaryCard,
    GKLightbox,
    RangeSlider,
 
@@ -261,6 +267,8 @@ export {
    TableNesting,
    TableActive,
    TableSmall,
-   TanstackTable
+   TanstackTable,
+
+   SignUpModalPopup
 
 };

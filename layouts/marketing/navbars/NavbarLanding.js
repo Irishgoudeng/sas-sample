@@ -15,7 +15,7 @@ import NavDropdownMain from 'layouts/marketing/navbars/NavDropdownMain';
 import useMounted from 'hooks/useMounted';
 import DarkLightMode from 'layouts/DarkLightMode';
 
-const NavbarLanding = ({ transparent }) => {
+const NavbarLanding = ({ transparent = false }) => {
 
 	const [expandedMenu, setExpandedMenu] = useState(false);
 	const hasMounted = useMounted();
@@ -26,9 +26,8 @@ const NavbarLanding = ({ transparent }) => {
 				onToggle={(collapsed) => setExpandedMenu(collapsed)}
 				expanded={expandedMenu}
 				expand="lg"
-				className={`navbar navbar-default shadow-none ${
-					transparent ? 'navbar-transparent' : ''
-				}`}
+				className={`navbar navbar-default shadow-none ${transparent ? 'navbar-transparent' : ''
+					}`}
 			>
 				<Container className="px-0">
 					<Navbar.Brand as={Link} href="/" className="navbar-brand">
@@ -58,13 +57,13 @@ const NavbarLanding = ({ transparent }) => {
 									);
 								} else {
 									return null;
-								} 
+								}
 							})}
-							{hasMounted ? <DocumentMenu /> : null}							
+							{hasMounted ? <DocumentMenu /> : null}
 						</Nav>
 						<Nav className="navbar-nav navbar-right-wrap ms-auto d-flex nav-top-wrap">
 							<div className="mt-3 mt-lg-0 d-flex align-items-center">
-								<DarkLightMode className="me-2"/>
+								<DarkLightMode className="me-2" />
 								<Nav.Link
 									href="https://themes.getbootstrap.com/store/codescandy/"
 									target="_blank"
@@ -82,10 +81,6 @@ const NavbarLanding = ({ transparent }) => {
 	);
 };
 
-// Specifies the default values for props
-NavbarLanding.defaultProps = {
-	transparent: false
-};
 
 // Typechecking With PropTypes
 NavbarLanding.propTypes = {

@@ -2,7 +2,7 @@
 Component : Flat Picker ( Date Picker )
 ***************************************
 
-Availalble Parameters
+Available Parameters
 
 value        	: Optional, value='' will show placeholder, if omit value it will show current date
 placeholder     : Optional, default placeholder = Select Date
@@ -14,8 +14,7 @@ import React, { useState } from 'react';
 import Flatpickr from 'react-flatpickr';
 import PropTypes from 'prop-types';
 
-export const FlatPickr = (props) => {
-	const { value, placeholder, options } = props;
+export const FlatPickr = ({ value, options, placeholder = 'Select Date' }) => {
 	const [picker, setDate] = useState(new Date());
 
 	return (
@@ -30,14 +29,14 @@ export const FlatPickr = (props) => {
 				options
 					? options
 					: {
-							dateFormat: 'Y-m-d',
-							disable: [
-								{
-									from: '2020-02-01',
-									to: '2020-02-10'
-								}
-							]
-					  }
+						dateFormat: 'Y-m-d',
+						disable: [
+							{
+								from: '2020-02-01',
+								to: '2020-02-10'
+							}
+						]
+					}
 			}
 		/>
 	);
@@ -45,10 +44,5 @@ export const FlatPickr = (props) => {
 
 // ** PropTypes
 FlatPickr.propTypes = {
-	placeholder: PropTypes.string.isRequired
-};
-
-// ** Default Props
-FlatPickr.defaultProps = {
-	placeholder: 'Select Date'
+	placeholder: PropTypes.string
 };

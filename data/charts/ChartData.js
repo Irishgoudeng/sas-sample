@@ -683,7 +683,7 @@ export const TaskStatusChartSeries = [75, 25];
 export const TaskStatusChartOptions = {
 	dataLabels: { enabled: false },
 	labels: ['Completed', 'Incomplete'],
-	colors: [theme.primary, theme.info],
+	colors: [theme.success, theme.danger],
 	chart: { width: 480, type: 'donut' },
 	plotOptions: { pie: { expandOnClick: !1, donut: { size: "75%" } } },
 	legend: {

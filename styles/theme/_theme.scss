@@ -31,6 +31,7 @@
 @import "./components/_chat-app.scss";
 @import "./components/_theme-switch.scss";
 @import "./components/_pagination.scss";
+@import "./components/_transition.scss";
 
 // helpers classes
 @import "./helpers/_text-truncate.scss";
@@ -53,3 +54,5 @@
 @import "./vendor/dropzone/_dropzone.scss";
 @import "./vendor/fullcalendar/_calendar.scss";
 @import "./vendor/bs-stepper/bs-stepper.scss";
+@import "./vendor/range-slider-input/_range-slider-input.scss";
+@import "./vendor/react-select/_react-select.scss";

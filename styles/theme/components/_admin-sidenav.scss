@@ -24,35 +24,14 @@
         height: 100% !important;
         overflow-y: auto;
     }
-    // .navbar-brand {
-    //     padding: 1rem 1.5rem 1.5rem;
-    //     margin-right: 0px;
-    //     display: flex;
-    //     img {
-    //         height: 1.875rem;
-    //     }
-    // }
     .navbar-brand {
-		padding: 1rem 1.5rem 1.5rem;
-		margin-right: 0px;
-		display: block;
-		img {
-		  height: 8rem;
-		  padding: 0.5rem; 
-		  display: block;
-		  margin: 0 auto;
-		}
-	  }
-	  .navbar-brand > img {
-		background-color: #fff; /* add a white background */
-		padding: 15px; 
-		border-radius: 5px; 
-		
-	  }
-	//   .navbar-brand > img:hover {
-	// 	filter: brightness(0.8); /* adjust the brightness on hover */
-	// 	transform: scale(1.1); /* scale the image on hover */
-	//   }
+        padding: 1rem 1.5rem 1.5rem;
+        margin-right: 0px;
+        display: block;
+        img {
+            height: 1.875rem;
+        }
+    }
     .navbar-heading {
         color: var(--#{$prefix}gray-700);
         padding: 0.6rem 2rem;

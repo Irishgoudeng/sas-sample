@@ -9,7 +9,6 @@
   box-shadow: $box-shadow-sm;
 }
 
-
 // Img left rounded for card
 .img-left-rounded {
   border-radius: 0.5rem 0 0 0.5rem;
@@ -21,13 +20,10 @@
   }
 }
 
-
 // Card header height
 .card-header-height {
   height: 3.75rem;
 }
-
-
 
 // Card hover
 .card-hover {
@@ -35,11 +31,10 @@
   &:hover,
   &:focus,
   &.active {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
   }
 }
-
-
 
 // Accordion
 .accordion {
@@ -50,7 +45,6 @@
   }
 }
 
-
 // card img size
 .card-img-size-600 {
   width: 100%;
@@ -58,7 +52,6 @@
     width: 600px;
   }
 }
-
 
 // card bordered
 .card-bordered {
@@ -80,7 +73,8 @@
   &:hover,
   &:focus,
   &.active {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
     border-top-color: var(--#{$prefix}primary) !important;
     transition: ease 1s;
     .card-icon {
@@ -88,4 +82,43 @@
       color: var(--#{$prefix}primary) !important;
     }
   }
+}
+
+// Card Lift
+
+.card-lift {
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-radius: $border-radius-lg;
+  &:hover,
+  &:focus,
+  &.active {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  }
+}
+
+.card-border-primary {
+  border: 1px solid transparent;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  &:hover {
+    border-color: $primary;
+    transform: translateY(-0.25rem);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  }
+}
+
+//card light primary
+.card-light-primary {
+  &:hover {
+    background-color: var(--#{$prefix}primary-bg-subtle);
+  }
+}
+
+// mentor home hero mentor card
+.mentor-card {
+  width: 200px !important;
 }

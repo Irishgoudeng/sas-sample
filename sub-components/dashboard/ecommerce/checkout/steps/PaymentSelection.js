@@ -5,17 +5,6 @@ import Link from 'next/link';
 
 const PaymentSelection = (props) => {
 	const { previous } = props;
-	const states = [
-		{ value: 'Gujarat', label: 'Gujarat' },
-		{ value: 'Maharashtra', label: 'Maharashtra' },
-		{ value: 'MP', label: 'MP' },
-		{ value: 'UP', label: 'UP' }
-	];
-	const radios = [
-		{ name: 'Full Time', value: '1' },
-		{ name: 'Freelance', value: '2' },
-		{ name: 'Contract', value: '3' }
-	];
 	const CardNumberInput = (props) => (
 		<InputMask
 			mask="9999-9999-9999-9999"

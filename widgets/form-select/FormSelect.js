@@ -3,9 +3,15 @@ import { Fragment } from 'react';
 import { Form } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-export const FormSelect = (props) => {
-	const { placeholder, defaultselected, options, id, name, onChange, required } = props;
-
+export const FormSelect = ({
+	placeholder = '',
+	defaultselected = 'Select',
+	options = [],
+	id = '',
+	name = '',
+	onChange,
+	required = false,
+}) => {
 	return (
 		<Fragment>
 			<Form.Select
@@ -37,17 +43,9 @@ export const FormSelect = (props) => {
 FormSelect.propTypes = {
 	placeholder: PropTypes.string.isRequired,
 	defaultselected: PropTypes.string.isRequired,
-	required : PropTypes.bool.isRequired,
+	required: PropTypes.bool.isRequired,
 	id: PropTypes.string,
 	name: PropTypes.string
-};
-
-FormSelect.defaultProps = {
-	placeholder: '',
-	defaultselected: '',
-	required:false,
-	id: '',
-	name: ''
 };
 
 export default FormSelect;

@@ -154,10 +154,15 @@ const NavbarDefault = [
 			},
 			{
 				id: uuid(),
-				menuitem: 'Education',
-				link: '/marketing/landings/landing-education/',
+				menuitem: 'Mentor',
+				link: '/marketing/landings/mentor',
 				badgecolor: 'primary',
 				badge: 'New'
+			},
+			{
+				id: uuid(),
+				menuitem: 'Education',
+				link: '/marketing/landings/landing-education/',
 			},
 			{
 				id: uuid(),
@@ -308,8 +313,6 @@ const NavbarDefault = [
 				id: uuid(),
 				menuitem: 'Portfolio',
 				link: '#',
-				badgecolor: 'primary',
-				badge: 'New',
 				children: [
 					{
 						id: uuid(),
@@ -320,6 +323,30 @@ const NavbarDefault = [
 						id: uuid(),
 						menuitem: 'Single',
 						link: '/marketing/portfolio/single/'
+					}
+				]
+			},
+			{
+				id: uuid(),
+				menuitem: 'Mentor',
+				link: '#',
+				badgecolor: 'primary',
+				badge: 'New',
+				children: [
+					{
+						id: uuid(),
+						menuitem: 'Home',
+						link: '/marketing/landings/mentor'
+					},
+					{
+						id: uuid(),
+						menuitem: 'List',
+						link: '/marketing/mentor/list/'
+					},
+					{
+						id: uuid(),
+						menuitem: 'Single',
+						link: '/marketing/mentor/single/'
 					}
 				]
 			},

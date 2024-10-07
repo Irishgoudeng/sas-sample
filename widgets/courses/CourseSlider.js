@@ -9,7 +9,12 @@ import CourseCard from 'widgets/courses/CourseCard';
 // import data files
 import { AllCoursesData } from 'data/slider/AllCoursesData';
 
-const CourseSlider = ({ recommended, popular, trending, category }) => {
+const CourseSlider = ({
+	recommended = false,
+	popular = false,
+	trending = false,
+	category = null
+}) => {
 	const settings = {
 		infinite: true,
 		slidesToShow: 4,
@@ -65,14 +70,6 @@ const CourseSlider = ({ recommended, popular, trending, category }) => {
 			</Slider>
 		</Fragment>
 	);
-};
-
-// Specifies the default values for props
-CourseSlider.defaultProps = {
-	recommended: false,
-	popular: false,
-	trending: false,
-	category: null
 };
 
 // Typechecking With PropTypes

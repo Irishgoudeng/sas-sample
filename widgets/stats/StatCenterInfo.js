@@ -24,9 +24,9 @@ const StatCenterInfo = (props) => {
 	const ActionMenu = () => {
 		return (
 			<Dropdown>
-				<Dropdown.Toggle as={CustomToggle}>
+				{/* <Dropdown.Toggle as={CustomToggle}>
 					<i className="fe fe-more-vertical text-muted"></i>
-				</Dropdown.Toggle>
+				</Dropdown.Toggle> */}
 				<Dropdown.Menu align="end">
 					<Dropdown.Header>Settings</Dropdown.Header>
 					<Dropdown.Item eventKey="1">Action</Dropdown.Item>

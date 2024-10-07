@@ -31,18 +31,4 @@ const TestimonialsSlider2 = () => {
 	);
 };
 
-// Specifies the default values for props
-TestimonialsSlider2.defaultProps = {
-	recommended: false,
-	popular: false,
-	trending: false
-};
-
-// Typechecking With PropTypes
-TestimonialsSlider2.propTypes = {
-	recommended: PropTypes.bool,
-	popular: PropTypes.bool,
-	trending: PropTypes.bool
-};
-
 export default TestimonialsSlider2;

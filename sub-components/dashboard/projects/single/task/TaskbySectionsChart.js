@@ -48,7 +48,7 @@ const TaskbySectionsChart = () => {
 			<Card.Body>
 				<div className="d-flex justify-content-between">
 					<div>
-						<h4 className="mb-0">Jobs by Task</h4>
+						<h4 className="mb-0">Jobs by Customer</h4>
 					</div>
 					<div>
 						{/* dropdown  */}

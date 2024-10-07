@@ -3,48 +3,48 @@ import { v4 as uuid } from 'uuid';
 export const UpcomingTaskListData = [
 	{
 		id: uuid(),
-		task: 'Design Wireframes',
+		task: 'HVAC System Inspection',
 		assignee: '/images/avatar/avatar-1.jpg',
 		progress: 65,
 		enddate: 'Set end date',
-		status: 'In Review',
-		statuscolor: 'primary'
-	},
-	{
-		id: uuid(),
-		task: 'Prototype design',
-		assignee: '/images/avatar/avatar-2.jpg',
-		progress: 75,
-		enddate: 'Aug 15, 2021',
 		status: 'In Progress',
 		statuscolor: 'info'
 	},
 	{
 		id: uuid(),
-		task: 'Content Writing',
+		task: 'Plumbing Repair',
+		assignee: '/images/avatar/avatar-2.jpg',
+		progress: 75,
+		enddate: 'Oct 10, 2024',
+		status: 'In Progress',
+		statuscolor: 'info'
+	},
+	{
+		id: uuid(),
+		task: 'Electrical System Maintenance',
 		assignee: '/images/avatar/avatar-3.jpg',
 		progress: 86,
-		enddate: 'Aug 16, 2021',
-		status: 'Cancel',
-		statuscolor: 'danger'
+		enddate: 'Oct 12, 2024',
+		status: 'Completed',
+		statuscolor: 'success'
 	},
 	{
 		id: uuid(),
-		task: 'Figma to Bootstrap Conversion',
+		task: 'Fire Safety Equipment Check',
 		assignee: '/images/avatar/avatar-4.jpg',
 		progress: 40,
-		enddate: 'Aug 18, 2021',
-		status: 'In Review',
-		statuscolor: 'primary'
+		enddate: 'Oct 15, 2024',
+		status: 'Scheduled',
+		statuscolor: 'warning'
 	},
 	{
 		id: uuid(),
-		task: 'User Interface Design',
+		task: 'Security System Upgrade',
 		assignee: '/images/avatar/avatar-6.jpg',
 		progress: 35,
-		enddate: 'Aug 18, 2021',
-		status: 'In Review',
-		statuscolor: 'primary'
+		enddate: 'Oct 16, 2024',
+		status: 'In Progress',
+		statuscolor: 'info'
 	}
 ];
 

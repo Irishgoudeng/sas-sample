@@ -2,7 +2,7 @@
 
 [data-theme="dark"] {
   // Color system - Dark Mode only
-  
+
   $gray-100: #0b1324;
   $gray-200: #0f172a;
   $gray-300: #1e293b;
@@ -16,9 +16,8 @@
   $light-primary: #312b4d;
   $light-info: #184457;
   $light-danger: #442626;
-$light-success:#25483e;
-$light-warning: #5a4327;
-
+  $light-success: #25483e;
+  $light-warning: #5a4327;
 
   $grays: (
     "100": $gray-100,
@@ -73,13 +72,13 @@ $light-warning: #5a4327;
     --#{$prefix}#{$color}: #{$value};
   }
 
-
-// color
+  // color
 
   @each $color, $value in $theme-colors {
     $color-rgb: to-rgb($value);
     .text-bg-#{$color} {
-      color: color-contrast($value) if($enable-important-utilities, !important, null);
+      color: color-contrast($value)
+        if($enable-important-utilities, !important, null);
       background-color: RGBA($color-rgb, var(--#{$prefix}bg-opacity, 1))
         if($enable-important-utilities, !important, null);
     }
@@ -90,7 +89,6 @@ $light-warning: #5a4327;
     }
     .text-#{$color} {
       color: $value !important;
-     
     }
   }
   // Color
@@ -176,9 +174,6 @@ $light-warning: #5a4327;
   --#{$prefix}navbar-vertical-link: #{$gray-600};
   --#{$prefix}navbar-vertical-link-hover: #{$gray-800};
 
-  // Accordion
-  // --#{$prefix}accordion-bg: #{$gray-300};
-
   // popover
   .popover {
     background-color: $gray-200; // 200
@@ -226,7 +221,6 @@ $light-warning: #5a4327;
     filter: brightness(0) invert(1);
   }
 
-
   .logo-inverse {
     -webkit-filter: brightness(0) invert(1);
     filter: brightness(0) invert(1);
@@ -239,19 +233,55 @@ $light-warning: #5a4327;
     color: var(--#{$prefix}gray-800) !important;
   }
 
-  input[type=file]::file-selector-button {
-   
+  input[type="file"]::file-selector-button {
     background-color: var(--#{$prefix}input-bg);
-    
-    
   }
   // hero image
-.hero-graphics{
-  background-image: url(../../../public/images/hero/hero-icon-bg-dark.svg); 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
- 
-}
-  
+  .hero-graphics {
+    background-image: url(../../../public/images/hero/hero-icon-bg-dark.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  .btn-outline-white {
+    --geeks-btn-color: #64748b;
+    --geeks-btn-border-color: #334155;
+    --geeks-btn-hover-color: #94a3b8;
+    --geeks-btn-hover-bg: #334155;
+    --geeks-btn-hover-border-color: #334155;
+    --geeks-btn-focus-shadow-rgb: 51, 58, 74;
+    --geeks-btn-active-color: #94a3b8;
+    --geeks-btn-active-bg: #334155;
+    --geeks-btn-active-border-color: #334155;
+    --geeks-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --geeks-btn-disabled-color: #192e4d;
+    --geeks-btn-disabled-bg: transparent;
+    --geeks-btn-disabled-border-color: #334155;
+    --geeks-gradient: none;
+  }
+
+  .btn-tag {
+    --geeks-btn-color: #64748b;
+    --geeks-btn-border-color: #334155;
+    --geeks-btn-hover-color: #94a3b8;
+    --geeks-btn-hover-bg: #334155;
+    --geeks-btn-hover-border-color: #334155;
+    --geeks-btn-focus-shadow-rgb: 51, 58, 74;
+    --geeks-btn-active-color: #94a3b8;
+    --geeks-btn-active-bg: #334155;
+    --geeks-btn-active-border-color: #334155;
+    --geeks-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --geeks-btn-disabled-color: #192e4d;
+    --geeks-btn-disabled-bg: transparent;
+    --geeks-btn-disabled-border-color: #334155;
+    --geeks-gradient: none;
+    --geeks-btn-border-radius: 50rem;
+  }
+  //card light primary
+  .card-light-primary {
+    &:hover {
+      background-color: #171033;
+    }
+  }
 }

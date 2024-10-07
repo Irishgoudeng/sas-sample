@@ -2,7 +2,7 @@
 Component : Logo with Top Heading + Offset settings ( added with v2.0.0 )
 *************************************************************************
 
-Availalble Parameters
+Available Parameters
 
 logos        : Required, list of the logos in JSON format
 title        : Optional, title to show logo section title
@@ -15,7 +15,7 @@ offset       : Optional, if you specify offset content will be displayed after N
 import PropTypes from 'prop-types';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
-const LogosTopHeadingOffset2 = ({ logos, title, limit, offset }) => {
+const LogosTopHeadingOffset2 = ({ logos, title, limit = -1, offset = 0 }) => {
 	const Heading = () => {
 		if (title) {
 			return (
@@ -36,7 +36,7 @@ const LogosTopHeadingOffset2 = ({ logos, title, limit, offset }) => {
 		return (
 			<Col>
 				<div className='mb-3 mt-3'>
-				<Image src={logo} alt="" />
+					<Image src={logo} alt="" />
 				</div>
 			</Col>
 		);
@@ -53,16 +53,16 @@ const LogosTopHeadingOffset2 = ({ logos, title, limit, offset }) => {
 		}
 	};
 	return (
-			<Container>
-				<Row>
-					<Col xl={{ span: 10, offset: offset }} sm={12}>
-						<Heading />
-						<Row className="text-center">
-							<LogosList />
-						</Row>
-					</Col>
-				</Row>
-			</Container>
+		<Container>
+			<Row>
+				<Col xl={{ span: 10, offset: offset }} sm={12}>
+					<Heading />
+					<Row className="text-center">
+						<LogosList />
+					</Row>
+				</Col>
+			</Row>
+		</Container>
 	);
 };
 
@@ -70,11 +70,6 @@ LogosTopHeadingOffset2.propTypes = {
 	title: PropTypes.string,
 	limit: PropTypes.number,
 	offset: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7])
-};
-
-LogosTopHeadingOffset2.defaultProps = {
-	limit: -1,
-	offset: 0
 };
 
 export default LogosTopHeadingOffset2;

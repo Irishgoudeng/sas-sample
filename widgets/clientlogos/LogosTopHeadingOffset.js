@@ -2,7 +2,7 @@
 Component : Logo with Top Heading + Offset settings
 ***************************************************
 
-Availalble Parameters
+Available Parameters
 
 logos        : Required, list of the logos in JSON format
 title        : Optional, title to show logo section title
@@ -15,7 +15,7 @@ offset       : Optional, if you specify offset content will be displayed after N
 import PropTypes from 'prop-types';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
-const LogosTopHeadingOffset = ({ logos, title, limit, offset }) => {
+const LogosTopHeadingOffset = ({ logos, title, limit = -1, offset = 0 }) => {
 	const Heading = () => {
 		if (title) {
 			return (
@@ -77,11 +77,6 @@ LogosTopHeadingOffset.propTypes = {
 	title: PropTypes.string,
 	limit: PropTypes.number,
 	offset: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7])
-};
-
-LogosTopHeadingOffset.defaultProps = {
-	limit: -1,
-	offset: 0
 };
 
 export default LogosTopHeadingOffset;

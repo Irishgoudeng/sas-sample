@@ -10,9 +10,11 @@ import { store } from 'store/store'
 // import theme style scss file
 import 'styles/theme.scss';
 
+
+
 // import default layouts
 import DefaultMarketingLayout from 'layouts/marketing/DefaultLayout';
-import DefaultDashboardLayout from 'layouts/dashboard/DashboardIndex';
+import DefaultDashboardLayout from 'layouts/dashboard/DashboardIndexTop';
 import { Fragment } from 'react';
 
 function MyApp({ Component, pageProps }) {
@@ -46,7 +48,7 @@ function MyApp({ Component, pageProps }) {
               url: '/images/og/geeks-ui-next-js-default-og-image.jpg',
               width: 1200,
               height: 630,
-              alt: 'Geeks UI NextJS',
+              alt: 'SAS - SAP B1 Portal',
             },
           ],
         }}

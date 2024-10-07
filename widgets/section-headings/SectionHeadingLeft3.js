@@ -10,12 +10,12 @@ const SectionHeadingLeft3 = ({
 	title,
 	subtitle,
 	description,
-	className,
+	className = 'display-3',
 	btntext,
 	btnlink
 }) => {
 	return (
-        <Row>
+		<Row>
 			<Col xl={7} lg={10} md={12} xs={12}>
 				{/* heading */}
 				{subtitle && (
@@ -31,14 +31,14 @@ const SectionHeadingLeft3 = ({
 				{/* button */}
 				{btnlink && btntext ? (
 					(<Link href={btnlink} className="btn btn-primary">
-                        {btntext}
-                    </Link>)
+						{btntext}
+					</Link>)
 				) : (
 					''
 				)}
 			</Col>
 		</Row>
-    );
+	);
 };
 
 // Typechecking With PropTypes
@@ -49,11 +49,6 @@ SectionHeadingLeft3.propTypes = {
 	className: PropTypes.string,
 	btntext: PropTypes.string,
 	btnlink: PropTypes.string
-};
-
-// Specifies the default values for props
-SectionHeadingLeft3.defaultProps = {
-	className: 'display-3'
 };
 
 export default SectionHeadingLeft3;

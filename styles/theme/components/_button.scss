@@ -13,28 +13,6 @@
   }
 }
 
-
-// btn outline white
-// .btn-outline-white {
-//   border-color: $gray-300;
-//   color: $body-color;
-//   &:hover {
-//     background-color: $gray-100;
-//     border-color: $gray-400;
-//     color: $body-color;
-//   }
-//   &:focus {
-//     background-color: $gray-100;
-//     border-color: $gray-400;
-//     color: $body-color;
-//   }
-//   &.active {
-//     background-color: $gray-100;
-//     border-color: $gray-400;
-//     color: $body-color;
-//   }
-// }
-
 // Sizing
 .btn-xs {
   padding: $input-btn-padding-y-xs $input-btn-padding-x-xs;
@@ -151,8 +129,6 @@
   }
 }
 
-
-
 // btn ghost
 .btn-ghost {
   --geeks-btn-font-weight: 600;
@@ -169,8 +145,6 @@
   --geeks-btn-active-border-color: var(--#{$prefix}btn-ghost-bg);
 }
 
-
-
 // checkbox icon button for ecommerce
 .icon-checked {
   opacity: 0;
@@ -184,4 +158,97 @@
   .icon-checked {
     opacity: 1;
   }
+}
+
+.theme-icon-active {
+  line-height: 1.5;
+}
+
+// Progress bottom to top
+
+.btn-scroll-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  display: block;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0.1rem rgba(227, 229, 233, 0.25);
+  z-index: 1010;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0.75rem);
+  transition: all 0.2s linear, margin-right 0s;
+  background-color: var(--#{$prefix}$white);
+  &:after {
+    position: absolute;
+    font-family: "bootstrap-icons" !important;
+    content: "\F145";
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    color: $primary;
+    left: 0;
+    top: 0;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    transition: all 0.2s linear;
+  }
+  &.active-progress {
+    visibility: visible;
+    transform: translateY(0);
+    @media (min-width: 320px) {
+      opacity: 1;
+    }
+  }
+  & svg path {
+    fill: none;
+  }
+  & svg.progress-square path {
+    stroke: $primary;
+    stroke-width: 2;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+  }
+}
+
+//button
+.btn-outline-white {
+  --geeks-btn-color: #64748b;
+  --geeks-btn-border-color: #cbd5e1;
+  --geeks-btn-hover-color: #1e293b;
+  --geeks-btn-hover-bg: #e2e8f0;
+  --geeks-btn-hover-border-color: #e2e8f0;
+  --geeks-btn-focus-shadow-rgb: 51, 58, 74;
+  --geeks-btn-active-color: #1e293b;
+  --geeks-btn-active-bg: #e2e8f0;
+  --geeks-btn-active-border-color: #e2e8f0;
+  --geeks-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --geeks-btn-disabled-color: #192e4d;
+  --geeks-btn-disabled-bg: transparent;
+  --geeks-btn-disabled-border-color: #e2e8f0;
+  --geeks-gradient: none;
+}
+
+.btn-tag {
+  --geeks-btn-color: #64748b;
+  --geeks-btn-border-color: #e2e8f0;
+  --geeks-btn-hover-color: #1e293b;
+  --geeks-btn-hover-bg: #e2e8f0;
+  --geeks-btn-hover-border-color: #e2e8f0;
+  --geeks-btn-focus-shadow-rgb: 51, 58, 74;
+  --geeks-btn-active-color: #1e293b;
+  --geeks-btn-active-bg: #e2e8f0;
+  --geeks-btn-active-border-color: #e2e8f0;
+  --geeks-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --geeks-btn-disabled-color: #192e4d;
+  --geeks-btn-disabled-bg: transparent;
+  --geeks-btn-disabled-border-color: #e2e8f0;
+  --geeks-gradient: none;
+  --geeks-btn-border-radius: 50rem;
 }

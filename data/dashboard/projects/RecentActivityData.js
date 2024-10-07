@@ -3,30 +3,30 @@ import { v4 as uuid } from 'uuid';
 export const RecentActivityData = [
 	{
 		id: uuid(),
-		activity: 'Task Finished',
-		activitybrief: `Paula finished figma task`,
-		time: '2 mins ago',
+		activity: 'Job Completed',
+		activitybrief: `John completed the electrical inspection task.`,
+		time: '5 mins ago',
 		icon: 'check'
 	},
 	{
 		id: uuid(),
-		activity: 'New Comment',
-		activitybrief: `Georg commented on task.`,
-		time: '1 hour ago',
-		icon: 'message-square'
+		activity: 'New Work Order',
+		activitybrief: `A new maintenance request was assigned to Sarah.`,
+		time: '30 mins ago',
+		icon: 'file-text'
 	},
 	{
 		id: uuid(),
-		activity: 'Task Overdue',
-		activitybrief: `Task <a href="#"><u>status updatd for board</u></a> is overdue.`,
-		time: '1 day',
+		activity: 'Job Overdue',
+		activitybrief: `The job <a href="#"><u>status updated for Site A</u></a> is overdue.`,
+		time: '1 day ago',
 		icon: 'alert-triangle'
 	},
 	{
 		id: uuid(),
-		activity: 'Update Send to Client',
-		time: '1 day',
-		activitybrief: `Jitu send email to update design for client Geeks UI.`,
+		activity: 'Update Sent to Supervisor',
+		time: '2 days ago',
+		activitybrief: `David sent an update regarding the safety inspection for the client's warehouse.`,
 		icon: 'mail'
 	}
 ];

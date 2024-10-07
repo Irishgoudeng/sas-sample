@@ -2,7 +2,7 @@
 Component : Avatar
 ****************************
 
-Availalble Parameters
+Available Parameters
 
 size        : Required, possible options are xxl, xl, lg, md, sm, xs
 type        : Required, possible options are image , initial
@@ -27,16 +27,16 @@ import { GKTippy } from 'widgets';
 
 const Avatar = (props) => {
 	const {
-		size,
+		size = 'md',
 		type,
 		src,
 		alt,
 		name,
-		className,
+		className = '',
 		status,
-		soft,
-		variant,
-		showExact,
+		soft = false,
+		variant = 'primary',
+		showExact = false,
 		imgtooltip,
 		bodyClasses
 	} = props;
@@ -64,23 +64,21 @@ const Avatar = (props) => {
 				return (
 					<GKTippy content={name}>
 						<span title={alt}
-							className={`avatar avatar-${size} avatar-primary me-0 mb-2 mb-lg-0 ${
-								status ? 'avatar-indicators avatar-' + status : ''
-							}`}
+							className={`avatar avatar-${size} avatar-primary me-0 mb-2 mb-lg-0 ${status ? 'avatar-indicators avatar-' + status : ''
+								}`}
 						>
 							<span className={`avatar-initials bg-${variant} ${className}`}>
 								{acronym}
 							</span>
 						</span>
-					</GKTippy>					
+					</GKTippy>
 				);
 			} else {
 				return (
 					<span
 						title={alt}
-						className={`avatar avatar-${size} avatar-primary me-0 mb-2 mb-lg-0 ${
-							status ? 'avatar-indicators avatar-' + status : ''
-						}`}
+						className={`avatar avatar-${size} avatar-primary me-0 mb-2 mb-lg-0 ${status ? 'avatar-indicators avatar-' + status : ''
+							}`}
 					>
 						<span className={`avatar-initials bg-${variant} ${className}`}>
 							{acronym}
@@ -92,9 +90,8 @@ const Avatar = (props) => {
 			if (imgtooltip && name) {
 				return (
 					<span
-						className={`avatar avatar-${size} me-1 ${
-							status ? 'avatar-indicators mb-2 mb-lg-0 avatar-' + status : ''
-						} ${bodyClasses ? bodyClasses : ''}`}
+						className={`avatar avatar-${size} me-1 ${status ? 'avatar-indicators mb-2 mb-lg-0 avatar-' + status : ''
+							} ${bodyClasses ? bodyClasses : ''}`}
 					>
 						<GKTippy content={name}>
 							<Image src={src} alt={alt} className={`mb-2 mb-lg-0 ${className}`} />
@@ -103,11 +100,10 @@ const Avatar = (props) => {
 				);
 			} else {
 				return (
-					<span className={`avatar avatar-${size} me-0 ${
-							status ? 'avatar-indicators mb-2 mb-lg-0 avatar-' + status : ''
+					<span className={`avatar avatar-${size} me-0 ${status ? 'avatar-indicators mb-2 mb-lg-0 avatar-' + status : ''
 						}`}
 					>
-						<Image src={src} alt={alt} className={`mb-2 mb-lg-0 ${className}`}/>
+						<Image src={src} alt={alt} className={`mb-2 mb-lg-0 ${className}`} />
 					</span>
 				);
 			}
@@ -146,14 +142,6 @@ Avatar.propTypes = {
 	showExact: PropTypes.bool,
 	imgtooltip: PropTypes.bool,
 	bodyClasses: PropTypes.string
-};
-
-Avatar.defaultProps = {
-	className: '',
-	size: 'md',
-	variant: 'primary',
-	soft: false,
-	showExact: false
 };
 
 const AvatarGroup = (props) => {

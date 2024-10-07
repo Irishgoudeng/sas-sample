@@ -19,6 +19,7 @@ import DarkLightMode from '../../../DarkLightMode';
 // import data files
 import NavbarDefaultRoutes from 'routes/marketing/NavbarDefault';
 
+
 const NavbarMegaMenu = () => {
 	const [expandedMenu, setExpandedMenu] = useState(false);
 
@@ -36,7 +37,7 @@ const NavbarMegaMenu = () => {
 						<Navbar.Brand as={Link} href="/">
 							<Image src='/images/brand/logo/logo.svg' alt="" />
 						</Navbar.Brand>
-						<CategoriesDropDown/>
+						<CategoriesDropDown />
 					</div>
 
 					<Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -82,18 +83,6 @@ const NavbarMegaMenu = () => {
 			</Navbar>
 		</Fragment>
 	);
-};
-
-// Specifies the default values for props
-NavbarMegaMenu.defaultProps = {
-	headerstyle: 'navbar-default',
-	login: false
-};
-
-// Typechecking With PropTypes
-NavbarMegaMenu.propTypes = {
-	headerstyle: PropTypes.string,
-	login: PropTypes.bool
 };
 
 export default NavbarMegaMenu;

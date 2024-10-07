@@ -7,9 +7,8 @@ import { GridListViewButton } from 'widgets';
 
 // import sub components
 import { WorkerGridCard,  WorkersListItems }  from 'sub-components';
+import WorkerStats from 'sub-components/dashboard/projects/single/task/WorkerStats';
 
-// import dashboard layout to override default layout 
-import DefaultDashboardLayout from 'layouts/dashboard/DashboardIndex';
 
 const Worker = () => {
 	return (
@@ -33,21 +32,18 @@ const Worker = () => {
 						</div>
 					</Col>
 				</Row>
-
+				
 				<Tab.Content>
-					<Tab.Pane eventKey="list" className="pb-4">
-						<Card className="mb-5 ">
-							<Card.Body className="p-0">
-								<WorkersListItems />
-							</Card.Body>
-						</Card>
-					</Tab.Pane>
+				<Tab.Pane eventKey="list" className="pb-4 tab-pane-custom-margin">
+					<WorkerStats />
+				<WorkersListItems />
+				</Tab.Pane>
+
 				</Tab.Content>
 			</Tab.Container>
 		</Fragment>
 	);
 };
 
-Worker.Layout = DefaultDashboardLayout;
 
 export default Worker;

@@ -2,7 +2,7 @@
 Component : Logo with Top Heading 2
 ***********************************
 
-Availalble Parameters
+Available Parameters
 
 logos        : Required, list of the logos in JSON format
 title        : Optional, title to show logo section title
@@ -14,7 +14,7 @@ limit        : Optional, default -1 i.e. show all logo, if you want to limit N n
 import PropTypes from 'prop-types';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
-const LogosTopHeading2 = ({ logos, title, limit }) => {
+const LogosTopHeading2 = ({ logos, title, limit = -1 }) => {
 	const Heading = () => {
 		if (title) {
 			return (
@@ -67,10 +67,6 @@ LogosTopHeading2.propTypes = {
 	logos: PropTypes.array,
 	title: PropTypes.string,
 	limit: PropTypes.number
-};
-
-LogosTopHeading2.defaultProps = {
-	limit: -1
 };
 
 export default LogosTopHeading2;

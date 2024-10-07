@@ -125,16 +125,16 @@ const FooterWithLinks = () => {
 								</span>
 							</p>
 							<div className="d-flex">
-									<Link href="#"><Image src='/images/svg/appstore.svg' alt="" className="img-fluid" /></Link>
-									<Link href="#" className="ms-2"><Image src='/images/svg/playstore.svg' alt="" className="img-fluid" /></Link>
-								</div>
+								<Link href="#"><Image src='/images/svg/appstore.svg' alt="" className="img-fluid" /></Link>
+								<Link href="#" className="ms-2"><Image src='/images/svg/playstore.svg' alt="" className="img-fluid" /></Link>
+							</div>
 						</div>
 					</Col>
 				</Row>
 				<Row className="align-items-center g-0 border-top py-2 mt-6">
 					{/* Desc  */}
 					<Col lg={4} md={5} sm={12}>
-						<span>© 2023 Geeks-UI, Inc. All Rights Reserved</span>
+						<span>© 2024 Geeks-UI, Inc. All Rights Reserved</span>
 					</Col>
 					{/*  Links  */}
 					<Col

@@ -7,10 +7,9 @@ const NavbarBrandOnly = () => {
         <Row>
 			<Col xl={{ offset: 1, span: 2 }} lg={12} md={12}>
 				<div className="mt-4">
-					{/* <Link href="/" passHref>
+					<Link href="/" passHref>
 						<Image src="/images/brand/logo/logo.svg" alt="" className="logo-inverse" />
-					</Link> */}
-				
+					</Link>
 				</div>
 			</Col>
 		</Row>

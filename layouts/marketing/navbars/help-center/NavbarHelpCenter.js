@@ -17,7 +17,7 @@ import PropTypes from 'prop-types';
 import DarkLightMode from 'layouts/DarkLightMode';
 import HelpCenterDropDown from './HelpCenterDropDown';
 
-const NavbarHelpCenter = ({ bg, className }) => {
+const NavbarHelpCenter = ({ bg = 'dark', className = '' }) => {
 	const [open, setOpen] = useState(false);
 	return (
 		<Fragment>
@@ -55,12 +55,12 @@ const NavbarHelpCenter = ({ bg, className }) => {
 							<Image src="/images/brand/logo/logo.svg" alt="" />
 						</Navbar.Brand>
 						<div className={`justify-content-between d-flex`}>
-							<div style={{height:'18px',marginTop :'13px'}} className={`vr bg-${bg === 'black' ? 'light' : 'black'} bg-opacity-25`} ></div>
-							<HelpCenterDropDown/>
+							<div style={{ height: '18px', marginTop: '13px' }} className={`vr bg-${bg === 'black' ? 'light' : 'black'} bg-opacity-25`} ></div>
+							<HelpCenterDropDown />
 						</div>
 					</div>
 					<div className="ms-auto d-flex align-items-center">
-						<DarkLightMode className="me-2"/>
+						<DarkLightMode className="me-2" />
 						<Link
 							href="#"
 							className={`me-md-4 text-${bg === 'dark' ? 'white-50' : 'inherit'} collapsed`}
@@ -84,11 +84,6 @@ const NavbarHelpCenter = ({ bg, className }) => {
 NavbarHelpCenter.propTypes = {
 	bg: PropTypes.string,
 	className: PropTypes.string
-};
-
-NavbarHelpCenter.defaultProps = {
-	bg: 'dark',
-	className: ''
 };
 
 export default NavbarHelpCenter;

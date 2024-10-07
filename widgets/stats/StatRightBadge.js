@@ -3,7 +3,7 @@ import { Card, Badge } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 export const StatRightBadge = (props) => {
-	const { title, subtitle, value, badgeValue, colorVariant, classValue } =
+	const { title, subtitle, value, badgeValue, colorVariant, classValue = '' } =
 		props;
 
 	return (
@@ -24,11 +24,6 @@ export const StatRightBadge = (props) => {
 			</Card.Body>
 		</Card>
 	);
-};
-
-// Specifies the default values for props
-StatRightBadge.defaultProps = {
-	classValue: ''
 };
 
 // Typechecking With PropTypes
