@@ -8,7 +8,7 @@ import { Dropdown } from 'react-bootstrap';
 const db = getFirestore();
 
 // Import widget/custom components
-import { StatRightIcon } from 'widgets';
+import { GeeksSEO, StatRightIcon } from 'widgets';
 
 // Import sub components
 import { PopularInstructor, Activity } from 'sub-components';
@@ -333,10 +333,8 @@ const Overview = () => {
 
   return (
     <Fragment>
-    {/* page header tabs */}
-    {/* <CommonHeaderTabs /> */}
+       <GeeksSEO title="Overview | SAS - SAP B1 Portal" />
 
-    {/* various stats of task */}
     <TaskStats />
 
     <Row>

@@ -1,12 +1,10 @@
-import { Fragment } from 'react';
-// import '../styles/calendar.scss';
-
+import { Fragment, useEffect } from 'react';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
 
 
   return <Fragment>
-
   </Fragment>;
 };
 

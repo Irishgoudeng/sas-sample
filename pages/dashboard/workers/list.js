@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import { Col, Row, Card, Tab, Breadcrumb } from 'react-bootstrap';
 
 // import widget/custom components
-import { GridListViewButton } from 'widgets';
+import { GeeksSEO, GridListViewButton } from 'widgets';
 
 // import sub components
 import { WorkerGridCard,  WorkersListItems }  from 'sub-components';
@@ -13,6 +13,7 @@ import WorkerStats from 'sub-components/dashboard/projects/single/task/WorkerSta
 const Worker = () => {
 	return (
 		<Fragment>
+			<GeeksSEO title="Worker Lists | SAS - SAP B1 Portal" />
 			<Tab.Container defaultActiveKey="list">
 				<Row>
 					<Col lg={12} md={12} sm={12}>
@@ -20,7 +21,7 @@ const Worker = () => {
 							<div className="mb-3 mb-md-0">
 								<h1 className="mb-1 h2 fw-bold">
 									View Workers
-									{/* View Workers <span className="fs-5 text-muted">(35)</span> */}
+									
 								</h1>
 								<Breadcrumb>
 									<Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>

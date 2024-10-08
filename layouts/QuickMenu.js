@@ -116,7 +116,7 @@ const QuickMenu = () => {
         bsPrefix="navbar-nav"
         className="navbar-right-wrap ms-2 d-flex nav-top-wrap"
       >
-        {/* <Dropdown as="li">
+        <Dropdown as="li">
           <Dropdown.Toggle as="a"
             bsPrefix=' '
             id="dropdownNotification"
@@ -145,7 +145,7 @@ const QuickMenu = () => {
               </div>
             </Dropdown.Item>
           </Dropdown.Menu>
-        </Dropdown> */}
+        </Dropdown>
         <Dropdown as="li" className="ms-2">
           <Dropdown.Toggle
             as="a"

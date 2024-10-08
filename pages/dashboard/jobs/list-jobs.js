@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, Fragment } from 'react';
-import { Row, Col, Card, Button, Badge, Dropdown, Tooltip, OverlayTrigger } from 'react-bootstrap';
+import { Row, Col, Card, Button, Badge, Dropdown, Tooltip, OverlayTrigger, Breadcrumb } from 'react-bootstrap';
 import { MoreVertical, Trash, Edit } from 'react-feather';
 import { useRouter } from 'next/router';
 import { FaUser } from 'react-icons/fa';
@@ -13,6 +13,8 @@ import DataTable from 'react-data-table-component';
 
 // Import CSS module
 import styles from './ViewJobs.module.css';
+import { GeeksSEO } from 'widgets';
+import JobStats from 'sub-components/dashboard/projects/single/task/JobStats';
 
 const ViewJobs = () => {
 	const router = useRouter();
@@ -289,6 +291,23 @@ const ViewJobs = () => {
 
 	return (
 		<Fragment>
+			<GeeksSEO title="Job Lists | SAS - SAP B1 Portal" />
+			
+			<Row>
+          <Col lg={12} md={12} sm={12}>
+            <div className="border-bottom pb-4 mb-4 d-flex align-items-center justify-content-between">
+              <div className="mb-3 mb-md-0">
+                <h1 className="mb-1 h2 fw-bold">Job Lists</h1>
+                <Breadcrumb>
+                  <Breadcrumb.Item href="#">Dashboard</Breadcrumb.Item>
+                  <Breadcrumb.Item href="#">Jobs</Breadcrumb.Item>
+                  <Breadcrumb.Item active>View Jobs</Breadcrumb.Item>
+                </Breadcrumb>
+              </div>
+            </div>
+          </Col>
+        </Row>
+		<JobStats/>
 			<Row>
 				<Col md={12} xs={12} className="mb-5">
 					<Card>

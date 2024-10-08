@@ -1,6 +1,7 @@
 
-// next.config.js
 /** @type {import('next').NextConfig} */
+const { Inter } = require('next/font/google');
+
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
@@ -20,7 +21,20 @@ const nextConfig = {
             key: 'NODE_TLS_REJECT_UNAUTHORIZED',
             value: '0', 
           },
+          {
+            key: 'Cache-Control',
+            value: 's-maxage=1, stale-while-revalidate=59',
+          },
         ],
+      },
+      {
+        source: "/fonts/(.*)",
+        headers: [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31556952, immutable"
+          }
+        ]
       },
     ];
   },
@@ -60,3 +74,66 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+
+// // next.config.js
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   reactStrictMode: false,
+//   swcMinify: true,
+//   env: {
+//     SAP_B1_SERVICE_LAYER_URL: process.env.SAP_B1_SERVICE_LAYER_URL,
+//     SAP_B1_COMPANY_DB: process.env.SAP_B1_COMPANY_DB,
+//     SAP_B1_USERNAME: process.env.SAP_B1_USERNAME,
+//     SAP_B1_PASSWORD: process.env.SAP_B1_PASSWORD,
+//     REACT_APP_GOOGLE_MAPS_API_KEY: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+//   },
+//   async headers() {
+//     return [
+//       {
+//         source: '/api/login',
+//         headers: [
+//           {
+//             key: 'NODE_TLS_REJECT_UNAUTHORIZED',
+//             value: '0', 
+//           },
+//         ],
+//       },
+//     ];
+//   },
+//   async rewrites() {
+//     return [
+//       {
+//         source: '/dashboard/workers/edit-worker/:workerId',
+//         destination: '/[workerId]',
+//       },
+//       {
+//         source: '/dashboard',
+//         destination: '/dashboard/overview',
+//       },
+//     ];
+//   },
+//   async redirects() {
+//     return [
+//       {
+//         source: '/',
+//         destination: '/dashboard/overview',
+//         permanent: true,
+//       },
+//       {
+//         source: '/dashboard/:path*',
+//         has: [
+//           {
+//             type: 'cookie',
+//             key: 'customToken', 
+//             value: '^(?!.*$)', // Matches if the cookie does not exist
+//           },
+//         ],
+//         permanent: false,
+//         destination: '/authentication/sign-in',
+//       },
+//     ];
+//   },
+// };
+
+// module.exports = nextConfig;

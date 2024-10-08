@@ -9,6 +9,7 @@ import { SkillsTab } from 'sub-components/dashboard/worker/SkillsTab';
 import { toast, ToastContainer } from 'react-toastify';
 import { useRouter } from 'next/router';
 import Swal from 'sweetalert2'; 
+import { GeeksSEO } from 'widgets';
 
 const CreateWorker = () => {
   const [activeTab, setActiveTab] = useState('personal');
@@ -112,6 +113,7 @@ const CreateWorker = () => {
   
   return (
     <Container>
+       <GeeksSEO title="Add Worker | SAS - SAP B1 Portal" />
       <Tab.Container defaultActiveKey="add">
         <Row>
           <Col lg={12} md={12} sm={12}>
