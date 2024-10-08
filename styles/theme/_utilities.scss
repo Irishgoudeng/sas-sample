@@ -11,6 +11,17 @@
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/utilities/api";
 
+// Utilities classes
+@import "./utilities/_icon-shape.scss";
+@import "./utilities/_type.scss";
+@import "./utilities/_text.scss";
+@import "./utilities/_collapse.scss";
+@import "./utilities/_background.scss";
+@import "./utilities/_border.scss";
+@import "./utilities/_overflow.scss";
+@import "./utilities/_gradient.scss";
+@import "./utilities/_sizing.scss";
+
 $utilities: () !default;
 
 $utilities: map-merge(
@@ -413,13 +424,3 @@ $utilities: map-merge(
   )
 );
 
-// Utilities classes
-@import "./utilities/_icon-shape.scss";
-@import "./utilities/_type.scss";
-@import "./utilities/_text.scss";
-@import "./utilities/_collapse.scss";
-@import "./utilities/_background.scss";
-@import "./utilities/_border.scss";
-@import "./utilities/_overflow.scss";
-@import "./utilities/_gradient.scss";
-@import "./utilities/_sizing.scss";
